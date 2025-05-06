@@ -55,20 +55,20 @@ app.get("/", (req, res) => {
 
 
 // Export app for Vercel
-// export default app;
+export default app;
 
 
 // MongoDB connection
-mongoose.connect(process.env.DB_CONNECTION_STRING, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => {
-  console.log("Connected to MongoDB");
+// mongoose.connect(process.env.DB_CONNECTION_STRING, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// }).then(() => {
+//   console.log("Connected to MongoDB");
 
-//   // Start server only after successful DB connection
-  app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-  });
-}).catch((err) => {
-  console.error("Error connecting to MongoDB:", err.message);
-});
+// //   // Start server only after successful DB connection
+//   app.listen(PORT, () => {
+//     console.log(`Server is running at http://localhost:${PORT}`);
+//   });
+// }).catch((err) => {
+//   console.error("Error connecting to MongoDB:", err.message);
+// });
